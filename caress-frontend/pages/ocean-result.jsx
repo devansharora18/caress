@@ -9,9 +9,6 @@ export default function Caress_result() {
 
 	const router = useRouter();
 
-	const [user, setUser] = useState(null);
-
-
 	useEffect(() => {
 		const checkAuthentication = async () => {
 		  try {
@@ -19,15 +16,6 @@ export default function Caress_result() {
 		  } catch (error) {
 			router.replace('/login');
 		  } 
-
-			const getUser = async () => {
-				const currentUser = await auth.isLoggedIn();
-				console.log('User object:', currentUser);
-				setUser(currentUser);
-				setIsLoading(false);
-				};
-				getUser();
-		  
 		};
 	
 		checkAuthentication();
@@ -38,6 +26,8 @@ export default function Caress_result() {
 		if (results == undefined) {
 			results = [0,0,0,0,0];
 		}
+
+	  const user = firebase.auth().currentUser;
 
 	  let openness = '';
 	  let conscientiousness = '';
