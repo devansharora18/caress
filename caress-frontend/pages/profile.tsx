@@ -156,7 +156,7 @@ export default function ProfileView() {
 
   const therapist = () => {
 	if (isTherapist) {
-		router.replace('/profile/therapist');
+		router.replace('/therapist');
 	} else {
 		router.replace('/therapist-profile');
 	}

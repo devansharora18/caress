@@ -39,7 +39,7 @@ export default function Chats() {
 	const router = useRouter();
 
 	const onClickFunction = () => {
-		router.replace('/chats/chatbot');
+		router.replace('/chatbot');
 	}
 
 	const goBack = () => {

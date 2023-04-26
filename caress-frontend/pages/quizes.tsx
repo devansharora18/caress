@@ -121,7 +121,7 @@ export default function Quiz() {
           {latestResult && daysDiff !== null && daysDiff < 7 ? (
             <button className={styles.btn}>Wait {7 - daysDiff} days to take the quiz again</button>
           ) : (
-            <button className={styles.btn} onClick={ () => router.push('/quizes/caress-quiz') }>Take Quiz</button>
+            <button className={styles.btn} onClick={ () => router.push('/caress-quiz') }>Take Quiz</button>
 			)}
 			</div>
 			</div>
@@ -144,9 +144,9 @@ export default function Quiz() {
     				</div>
 				</div>
 				{OlatestResult !== null ? (
-            <button className={styles.btn} onClick={ () => router.push('/quizes/ocean-quiz') }>Pay 5$ to retake the quiz</button>
+            <button className={styles.btn} onClick={ () => router.push('/ocean-quiz') }>Pay 5$ to retake the quiz</button>
           ) : (
-            <button className={styles.btn} onClick={ () => router.push('/quizes/ocean-quiz') }>Take Quiz</button>
+            <button className={styles.btn} onClick={ () => router.push('/ocean-quiz') }>Take Quiz</button>
 			)}
 				</div>
 
