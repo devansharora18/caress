@@ -22,11 +22,16 @@ export default function Caress_result() {
 		checkAuthentication();
 	  }, []);
 
-	const results: any = router.query.result;
+	let results = router.query.result;
+
+	if (results == undefined) {
+		results = [0,0,0,0,0,0];
+	}
 	let mhc = (0.1 * results[0]) + (0.15 * results[1]) + (0.15 * results[2]) + (0.25 * results[3]) + (0.2 * results[4]) + (0.15 * results[5])
 
 
-	const user: any = firebase.auth().currentUser;
+
+	const user = firebase.auth().currentUser;
 
 	const now = new Date();
   const quizResult = {

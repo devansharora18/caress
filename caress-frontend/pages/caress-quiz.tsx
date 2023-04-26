@@ -362,7 +362,7 @@ export default function Caress_quiz() {
 				fields[i] += array[i];
 			  }
 			isClicked[questionNumber] = 1;
-		  router.push({pathname: '/caress-result', query: { result: fields }});
+		  router.replace({pathname: '/caress-result', query: { result: fields }});
 		} else {
 			for (let i = 0; i < fields.length; i++) {
 				fields[i] += array[i];

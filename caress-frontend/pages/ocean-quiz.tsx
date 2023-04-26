@@ -299,7 +299,7 @@ export default function Ocean_quiz() {
 				fields[i] += array[i];
 			  }
 			isClicked[questionNumber] = 1;
-		  router.push({pathname: '/ocean-result', query: { result: fields }});
+		  router.replace({pathname: '/ocean-result', query: { result: fields }});
 		} else {
 			for (let i = 0; i < fields.length; i++) {
 				fields[i] += array[i];

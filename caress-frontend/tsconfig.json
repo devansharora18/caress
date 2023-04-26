@@ -18,6 +18,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx", "pages/login.tsx", "components/topbar.tsx", "components/topbar.tsx", "pages/chats/chatbot.jsx", "pages/chat.jsx", "pages/chat.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/index.tsx", "pages/login.tsx", "components/topbar.tsx", "components/topbar.tsx", "pages/chats/chatbot.jsx", "pages/chat.jsx", "pages/chat.jsx", "pages/ocean-result.jsx", "pages/caress-result.jsx"],
   "exclude": ["node_modules"]
 }

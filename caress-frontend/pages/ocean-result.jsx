@@ -22,9 +22,13 @@ export default function Caress_result() {
 		checkAuthentication();
 	  }, []);
 
-	  const results: any = router.query.result;
+	  let results = router.query.result;
 
-	  const user: any = firebase.auth().currentUser;
+		if (results == undefined) {
+			results = [0,0,0,0,0];
+		}
+
+	  const user = firebase.auth().currentUser;
 
 	  let openness = '';
 	  let conscientiousness = '';
@@ -79,15 +83,6 @@ export default function Caress_result() {
 
   const now = new Date();
 
-  const quizResult = {
-	date: now.toDateString(),
-	traits: traits,
-	openness: results[0],
-	conscientiousness: results[1],
-	extraversion: results[2],
-	agreeableness: results[3],
-	neuroticism: results[4],
-  }
 
   useEffect(() => {
 	firebase.firestore().collection('users').doc(user.uid).collection('ocean-results').doc(now.toDateString()).set(quizResult);
