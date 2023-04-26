@@ -74,6 +74,17 @@ export default function ChatBot() {
       uid,
       displayName,
       photoURL,
+			
+		})
+
+		firestore.collection('users').doc(therapistId).collection('chat').doc(user?.uid).set({
+			createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+			displayName,
+			photoURL,
+			uid,
+			to: therapistName,
+			to_photo:  therapistPhotoUrl,
+			to_uid: therapistId,
 		})
   
   
