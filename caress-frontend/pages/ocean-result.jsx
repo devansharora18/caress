@@ -82,6 +82,15 @@ export default function Caress_result() {
 
   const now = new Date();
 
+	const quizResult = {
+		date: now.toDateString(),
+		traits: traits,
+		openness: results[0],
+		conscientiousness: results[1],
+		extraversion: results[2],
+		agreeableness: results[3],
+		neuroticism: results[4],
+		}
 
   useEffect(() => {
 	firebase.firestore().collection('users').doc(user.uid).collection('ocean-results').doc(now.toDateString()).set(quizResult);
