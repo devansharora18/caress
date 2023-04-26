@@ -43,7 +43,7 @@ export default function ChatBot() {
 
   useEffect(() => {
     dummy.current.scrollIntoView({ behavior: 'smooth' });
-  }, [messages]);
+  }, [user]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
