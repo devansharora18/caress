@@ -89,7 +89,10 @@ export default function Caress_result() {
 	neuroticism: results[4],
   }
 
+  useEffect(() => {
 	firebase.firestore().collection('users').doc(user.uid).collection('ocean-results').doc(now.toDateString()).set(quizResult);
+  }, [user])
+
 
 
   return (

@@ -81,7 +81,7 @@ export default function Search() {
 
 		  
 			therapists();
-	}, [therapist, therapistUids, firebase, user])
+	}, [therapist, therapistUids, user])
 
 	console.log();
 

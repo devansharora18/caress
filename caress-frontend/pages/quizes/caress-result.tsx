@@ -41,7 +41,9 @@ export default function Caress_result() {
   };
 
 //  firebase.firestore().collection('users').doc(user.uid).collection('caress-results').add(quizResult);
-const latestResultRef = firebase.firestore().collection('users').doc(user.uid).collection('caress-results')
+
+  useEffect(() => {
+	const latestResultRef = firebase.firestore().collection('users').doc(user.uid).collection('caress-results')
 .orderBy('date', 'desc')
 .limit(1);
 
@@ -60,6 +62,8 @@ if (!snapshot.empty) {
 }).catch((error) => {
 console.log('Error getting latest quiz result:', error);
 });
+  }, [user])
+
 	return (
 		<div className={styles.content}>
   <Head>
