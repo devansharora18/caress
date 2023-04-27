@@ -37,7 +37,7 @@ export default function ChatBot() {
   const dummy = useRef();
 	const firestore = firebase.firestore();
   const messagesRef = firestore.collection('users').doc(user?.uid).collection('chatbot');
-  const query = messagesRef.orderBy('createdAt',  'desc').limit(25);
+  const query = messagesRef.orderBy('createdAt').limitToLast(25);
 
   let [messages] = useCollectionData(query, { idField: 'id' });
 	messages = messages?.reverse();
@@ -55,7 +55,7 @@ export default function ChatBot() {
 
 	useEffect(() => {
     dummy.current.scrollIntoView({ behavior: 'smooth' });
-  }, [user]);
+  }, [messages]);
 
   const sendMessage = async (e) => {
     e.preventDefault();
