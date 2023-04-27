@@ -150,13 +150,20 @@
 	bottom: 0;
 	/*background-color: rgb(24, 23, 23);*/
 	width: 100%;
-	max-width: 728px;
+	/*max-width: 728px;*/
 	display: flex;
 	font-size: 1.5rem;
 	padding: 15px;
 	/*border-radius: 20px;*/
 	/*background-color: #ECDFF5;*/
 	z-index: 1;
+  }
+
+  @media (min-width: 1200px) {
+	.form {
+		padding-left: 20%;
+		padding-right: 20%;
+	}
   }
   
 .form button {
