@@ -40,7 +40,7 @@ export default function ChatBot() {
   const query = messagesRef.orderBy('createdAt').limitToLast(25);
 
   let [messages] = useCollectionData(query, { idField: 'id' });
-	messages = messages?.reverse();
+	//messages = messages?.reverse();
 	const [data, setData] = useState("");
 
   useEffect(() => {
