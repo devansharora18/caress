@@ -68,7 +68,6 @@
   }
   
 
-  @media only screen and (max-width: 600px) {
 	.chatContainer {
 	  flex-direction: column;
 	  height: calc(100vh - 100px); /* Account for the bottom bar and chat header */
@@ -84,7 +83,7 @@
 	  width: 100%;
 	  height: 200px;
 	}
-  }
+
 
 .header {
 	font-size: 25px;
