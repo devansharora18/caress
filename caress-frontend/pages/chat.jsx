@@ -36,9 +36,9 @@ export default function ChatBot() {
 	const { therapistUid, therapistName, therapistPhotoUrl } = router.query;
   const therapistId = therapistUid; // Update this with the selected therapist's ID
 	const messagesRef = firestore.collection('users').doc(user?.uid).collection('chat').doc(therapistId).collection('messages');
-  const query = messagesRef.orderBy('createdAt',  'desc').limit(25);
+  const query = messagesRef.orderBy('createdAt').limitToLast(25);
 	let [messages] = useCollectionData(query, { idField: 'id' });
-  messages = messages?.reverse();
+  //messages = messages?.reverse();
   const [data, setData] = useState("");
 
   useEffect(() => {

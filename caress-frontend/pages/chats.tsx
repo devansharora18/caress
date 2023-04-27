@@ -160,6 +160,7 @@ querySnapshot.forEach(doc => {
 			  }
 			
 			return (
+				<div>
 			<div className={styles.chat} onClick={goToChat}>
 			{/*<div className={styles.chatAvatar}>*/}
 				<img className={styles.chatAvatar} src={url} alt="" />
@@ -169,6 +170,8 @@ querySnapshot.forEach(doc => {
 				{/*<div className={styles.chatPreview}>{msg.text}</div>*/}
 			</div>
 			<div className={styles.chatTime}>{msg.createdAt.toDate().toLocaleString().split(',')[0]}</div>
+			</div>
+			<br />
 			</div>
 		  )})}
         </div>
