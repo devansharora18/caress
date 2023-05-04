@@ -69,7 +69,7 @@ export default function ChatBot() {
       photoURL,
     });
 
-		fetch('https://caress-chatbot.devansharora.repl.co/predict', {
+		fetch('https://caress-chatbot-2.devansharora.repl.co/predict', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
