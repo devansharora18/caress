@@ -60,10 +60,20 @@
   padding: 0;
   margin: 0;
   -webkit-tap-highlight-color: transparent;
+  
 }
 * {
 	font-family: 'Poppins', sans-serif;
 }
+
+.scrollbar-hidden::-webkit-scrollbar {
+	display: none;
+  }
+
+  .scrollbar-hidden {
+	-ms-overflow-style: none;
+	scrollbar-width: none; /* Firefox */
+  }
 
 html,
 body {
