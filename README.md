@@ -60,9 +60,6 @@ We welcome contributions to enhance the Caress Mental Health App. If you'd like 
 
 If you encounter any issues with the app or have any questions, please reach out at hsnaved.reverse@gmail.com
 
-## License
-
-The Caress Mental Health App is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
 ## Acknowledgements
 
